@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 // import { Link } from 'react-router-dom';
 import door1 from '../Images/Doors.png';
 import door2 from '../Images/Doors.png';
 import beach from '../Images/Beach.png';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
+
 const Home = () => {
   const [door1Position, setDoor1Position] = useState('center');
   const [door2Position, setDoor2Position] = useState('center');
   const [beachClosed, setBeach] = useState();
   const [doorsOpen, setDoorsOpen] = useState(false);
+  const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+
+  const videoRef = useRef(null);
 
   const handleClick = () => {
     if (door1Position === 'center' && door2Position === 'center') {
@@ -40,10 +44,25 @@ const Home = () => {
         />
         {doorsOpen && (
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
-            <button className='video-button pl-10 py-3 flex items-center hover:scale-110 duration-500 shadow-md' >
+            <button className='video-button pl-10 py-3 flex items-center hover:scale-110 duration-500 shadow-md'
+              onClick={() => setShowVideoPlayer(true)}
+            >
               <span className='mr-6 ml-4'>WATCH VIDEO</span>
-              <FaChevronRight size={23}/>
+              <FaChevronRight size={23} />
             </button>
+          </div>
+        )}
+        {showVideoPlayer && (
+          <div className='video-player absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
+            <video
+              ref={videoRef}
+              width="600px"
+              height="300px"
+              autoPlay
+              controls
+            >
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+            </video>
           </div>
         )}
         <img
