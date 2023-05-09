@@ -14,13 +14,31 @@ body {
 /* HomePage.css */
 
 .shadow-md {
-  box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.2),
+    0 4px 8px -2px rgba(0, 0, 0, 0.12);
 }
 
 .door {
   transition: margin 1s ease-in-out;
+  z-index: 1;
 }
 
 .door2.right {
   margin-left: 74.5%;
 }
+
+.beach {
+  position: absolute;
+  height: 28vw;
+  object-fit: cover;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.beach.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+
