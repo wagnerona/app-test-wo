@@ -18,14 +18,9 @@ body {
 }
 
 .door {
-  transition: transform 1s ease-in-out;
-}
-
-.door1.left {
-  transform: translateX(-100%);
-  
+  transition: margin 1s ease-in-out;
 }
 
 .door2.right {
-  transform: translateX(100%);
+  margin-left: 74.5%;
 }
