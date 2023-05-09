@@ -29,6 +29,9 @@ const Home = () => {
     }
   };
 
+  const handleClose = () => setShowVideoPlayer(false);
+
+
 
   return (
     <section name="home" className="bg-pattern h-screen flex-col items-center justify-center bg-[#FFDDBA] text-white">
@@ -40,10 +43,10 @@ const Home = () => {
           src={beach}
           alt='Beach'
           onClick={() => { handleClick() }}
-          className={`beach ${beachClosed} mr-auto`}
+          className={`beach ${beachClosed} z- 10 mr-auto`}
         />
         {doorsOpen && (
-          <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
+          <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
             <button className='video-button pl-10 py-3 flex items-center hover:scale-110 duration-500 shadow-md'
               onClick={() => setShowVideoPlayer(true)}
             >
@@ -53,7 +56,7 @@ const Home = () => {
           </div>
         )}
         {showVideoPlayer && (
-          <div className='video-player absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
+          <div className='video-player absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50'>
             <video
               ref={videoRef}
               width="600px"
@@ -63,23 +66,28 @@ const Home = () => {
             >
               <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
             </video>
+            <button className="close-video absolute bg-slate-600 rounded px-2 py-1 opacity-20 hover:opacity-100 hover:bg-[#FF7BAC]" onClick={() => handleClose()}>Close Video</button>
           </div>
         )}
         <img
           src={door1}
           alt='Door 1'
           onClick={() => handleClick()}
-          className={`cursor-pointer door door1 ${door1Position} ml-auto`}
+          className={`cursor-pointer door door1 ${door1Position} ml-auto z-20`}
         />
         <img
           src={door2}
           alt='Door 2'
           onClick={() => { handleClick() }}
-          className={`cursor-pointer door door2 ${door2Position} mr-auto`}
+          className={`cursor-pointer door door2 ${door2Position} mr-auto z-20`}
         />
       </div>
+      {showVideoPlayer && (
+        <div onClick={() => handleClose()} className='video-overlay w-full h-screen z-30'>
+        </div>
+      )}
 
-      <div className='flex-col'>
+      <div className='flex-col '>
         <div className='flex justify-center pt-10 pb-3 text-[#FF7BAC]'>
           <FaChevronLeft className='cursor-pointer' size={30} onClick={() => { handleClick() }} /> <FaChevronRight className='cursor-pointer' size={30} onClick={() => { handleClick() }} />
         </div>

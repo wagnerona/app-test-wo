@@ -19,7 +19,6 @@
 
 .door {
   transition: margin 1s ease-in-out;
-  z-index: 1;
 }
 
 .door2.right {
@@ -43,6 +42,7 @@
 h1,
 h2 {
   -webkit-text-stroke: 2px #ff7bac;
+  
 }
 
 .explore-text {
@@ -51,7 +51,6 @@ h2 {
 }
 
 .video-button {
-  background: rgb(255, 171, 145);
   background: linear-gradient(
     0deg,
     rgba(255, 171, 145, 1) 0%,
@@ -59,4 +58,17 @@ h2 {
   );
   width: 200px;
   height: 40px;
+}
+
+.video-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+
+}
+
+.close-video {
+  right: 10px;
+  top: 10px;
 }
