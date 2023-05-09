@@ -16,3 +16,16 @@ body {
 .shadow-md {
   box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.12);
 }
+
+.door {
+  transition: transform 1s ease-in-out;
+}
+
+.door1.left {
+  transform: translateX(-100%);
+  
+}
+
+.door2.right {
+  transform: translateX(100%);
+}
