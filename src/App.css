@@ -13,51 +13,6 @@ body {
 
 /* HomePage.css */
 
-.image1 {
-  position: absolute;
-  top: 463px;
-  left: -248px;
-  opacity: 0;
-  animation: popIn 0s 1s forwards;
-}
-
-.image2 {
-  position: absolute;
-  top: 280px;
-  left: 720px;
-  opacity: 0;
-  animation: popIn 0s 2s forwards;
-}
-
-.image3 {
-  position: absolute;
-  top: -252px;
-  left: 720px;
-  opacity: 0;
-  animation: popIn 0s 3s forwards;
-}
-
-.image4 {
-  position: absolute;
-  top: 15px;
-  left: -421px;
-  opacity: 0;
-  animation: popIn 0s 4s forwards;
-}
-
-.image5 {
-  position: absolute;
-  top: 673px;
-  left: 260px;
-  opacity: 0;
-  animation: popIn 0s 5s forwards;
-}
-
-@keyframes popIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.shadow-md {
+  box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.12);
 }
