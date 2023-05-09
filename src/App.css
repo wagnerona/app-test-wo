@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+@layer base {
+  body {
+    @apply font-[Oswald] !important;
+  }
 }
 
 /* HomePage.css */
@@ -41,4 +40,12 @@ body {
   visibility: visible;
 }
 
+h1,
+h2 {
+  -webkit-text-stroke: 2px #ff7bac;
+}
 
+.explore-text {
+  color: #ff7bac;
+  -webkit-text-stroke: 0;
+}

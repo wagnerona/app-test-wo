@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         'pattern': "url('/src/Images/Pattern.png')",
       },
+      fontFamily: {
+        'bodyFont': ['Pathway Gothic One', 'sans-serif'],
+      }
     },
   },
   plugins: [],
