@@ -49,3 +49,14 @@ h2 {
   color: #ff7bac;
   -webkit-text-stroke: 0;
 }
+
+.video-button {
+  background: rgb(255, 171, 145);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 171, 145, 1) 0%,
+    rgba(255, 123, 172, 1) 100%
+  );
+  width: 200px;
+  height: 40px;
+}
