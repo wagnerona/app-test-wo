@@ -35,10 +35,14 @@ const Home = () => {
 
   return (
     <section name="home" className="bg-pattern h-screen flex-col items-center justify-center bg-[#FFDDBA] text-white">
+
+      {/* title of app */}
       <header >
         <h1 className='text-center text-4xl pt-28 pb-10'>THIS IS A CAMPAIGN FOR A DESTINATION</h1>
       </header>
-      <div className='w-full h-[28vw] flex overflow-hidden relative'>
+
+
+      <div className='jumbotron w-full h-[58%] flex overflow-hidden relative'>
         <img
           src={beach}
           alt='Beach'
@@ -66,7 +70,7 @@ const Home = () => {
             >
               <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
             </video>
-            <button className="close-video absolute bg-slate-600 rounded px-2 py-1 opacity-20 hover:opacity-100 hover:bg-[#FF7BAC]" onClick={() => handleClose()}>Close Video</button>
+            <button className="close-video absolute bg-slate-600 rounded px-2 py-1 opacity-20 hover:opacity-100 hover:bg-[#FF7BAC]" onClick={() => handleClose()}>CLOSE</button>
           </div>
         )}
         <img
