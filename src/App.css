@@ -28,7 +28,6 @@
 .beach {
   position: absolute;
   top: 2%;
-  height: 27vw;
   object-fit: cover;
   opacity: 0;
   visibility: hidden;

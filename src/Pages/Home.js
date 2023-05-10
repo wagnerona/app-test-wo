@@ -43,7 +43,7 @@ const Home = () => {
           src={beach}
           alt='Beach'
           onClick={() => { handleClick() }}
-          className={`beach ${beachClosed} mr-auto`}
+          className={`beach ${beachClosed} h-[27vw] mr-auto`}
         />
         {doorsOpen && (
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
