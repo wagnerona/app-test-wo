@@ -12,19 +12,23 @@
 
 /* HomePage.css */
 
+/* shadow for elements */
 .shadow-md {
   box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.2),
     0 4px 8px -2px rgba(0, 0, 0, 0.12);
 }
 
+/* the transition for both doors */
 .door {
   transition: margin 1s ease-in-out;
 }
 
+/* margin of door that pushes both open */
 .door2.right {
   margin-left: 74.5%;
 }
 
+/* background image of beach centered, not visible at start */
 .beach {
   position: absolute;
   top: 2%;
@@ -34,22 +38,26 @@
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
+/* when door is open, beach is visible */
 .beach.open {
   opacity: 1;
   visibility: visible;
 }
 
+/* text strokes */
 h1,
 h2 {
   -webkit-text-stroke: 2px #ff7bac;
   
 }
 
+/* individual text adjustment */
 .explore-text {
   color: #ff7bac;
   -webkit-text-stroke: 0;
 }
 
+/* custom video button */
 .video-button {
   background: linear-gradient(
     0deg,
@@ -60,6 +68,7 @@ h2 {
   height: 40px;
 }
 
+/* video overlay */
 .video-overlay {
   position: absolute;
   left: 0;
@@ -68,6 +77,7 @@ h2 {
 
 }
 
+/* button to close video */
 .close-video {
   right: 10px;
   top: 10px;
